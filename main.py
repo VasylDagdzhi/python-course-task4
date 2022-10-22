@@ -141,3 +141,26 @@ school_bus_18.mileage_info()
 school_bus_18.show_seating_capacity()
 school_bus_18.print_school_address()
 school_bus_18.print_school_main_subject()
+
+# 7. Поліморфізм: Створіть два класи: Bear, Wolf. Обидва вони повинні мати метод eat. Створіть два екземпляри: від Ведмідь і від Вовк,
+# створіть із нього кортеж і використовуючи спільну змінну, викличте метод eat.
+
+print("\nTask 7\n")
+
+
+class Bear:
+    def eat(self):
+        print(f"The {str(type(self))[-6:-2]} is eating.")
+
+
+class Wolf:
+    def eat(self):
+        print(f"The {str(type(self))[-6:-2]} is eating.")
+
+
+bear = Bear()
+wolf = Wolf()
+
+cortege = (bear, wolf)
+for i in cortege:
+    i.eat()
