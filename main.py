@@ -77,5 +77,10 @@ print(f"Is class 'Bus' inherited from class 'Vehicle'? \t {issubclass(Bus, Vehic
 
 
 # 4. Створіть екземпляр Bus під назвою school_bus і визначте, чи є school_bus об'єктом класу Vehicle/Bus
+
+school_bus = Bus(10, 40, 20, 32)
+print(f"Is our school bus an object of class 'Vehicle' ? {isinstance(school_bus, Vehicle)}")
+print(f"Is our school bus an object of class 'Bus' ? {isinstance(school_bus, Bus)}")
+
 # 5. Створіть новий клас School з атрибутами екземпляра get_school_id і number_of_students та методами school_address,
 # main_subject
