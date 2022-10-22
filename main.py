@@ -164,3 +164,35 @@ wolf = Wolf()
 cortege = (bear, wolf)
 for i in cortege:
     i.eat()
+
+# Магічні методи:
+# Додатково: 8*. Створіть клас City з атрибутами екземпляра name i population, сторіть новий екземпляр цього класу,
+# лише коли population > 1500,
+# інакше повертається повідомлення: "Your city is too small". Підказка: використовуєте для цього завдання магічні методи
+
+print("\nTask 8\n")
+
+
+class City:
+    name: str
+    population: int
+
+    def __new__(cls, name, population):
+        if population < 1500:
+            print("Your population is too small!")
+            return None
+        else:
+            cls.name = name
+            cls.population = population
+            return cls
+
+
+lviv = City("Lviv", 4000)
+javoriv = City("Yavoriv", 400)
+city_cortege = (lviv, javoriv)
+
+for i in city_cortege:
+    if i is not None:
+        print(f"{i.name} population is {i.population}.")
+    else:
+        print(f"{i.name} is not a city.")
