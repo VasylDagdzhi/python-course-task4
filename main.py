@@ -2,7 +2,7 @@
 # mileage_info
 import time
 
-print("Task 1\n")
+print("\nTask 1\n")
 
 
 class Vehicle:
@@ -46,7 +46,7 @@ auto.mileage_info()
 # 2. Створіть дочірній клас Bus, який успадкує всі змінні та методи класу Vehicle і матиме власний метод
 # seating_capacity
 
-print("Task 2\n")
+print("\nTask 2\n")
 
 
 class Bus(Vehicle):
@@ -70,17 +70,47 @@ bus.show_seating_capacity()
 
 # 3. Визначте, від якого класу успадковується клас Bus (перевірте issubclass)
 
-print("Task 3\n")
+print("\nTask 3\n")
 
 print(f"Is class 'Vehicle' inherited from class 'Bus'? \t {issubclass(Vehicle, Bus)}")
 print(f"Is class 'Bus' inherited from class 'Vehicle'? \t {issubclass(Bus, Vehicle)}")
 
-
 # 4. Створіть екземпляр Bus під назвою school_bus і визначте, чи є school_bus об'єктом класу Vehicle/Bus
 
+print("\nTask 4\n")
 school_bus = Bus(10, 40, 20, 32)
 print(f"Is our school bus an object of class 'Vehicle' ? {isinstance(school_bus, Vehicle)}")
 print(f"Is our school bus an object of class 'Bus' ? {isinstance(school_bus, Bus)}")
 
 # 5. Створіть новий клас School з атрибутами екземпляра get_school_id і number_of_students та методами school_address,
 # main_subject
+
+print("\nTask 5\n")
+
+
+class School:
+    school_id: int
+    number_of_students: int
+    school_address: str
+    main_subject: str
+
+    def __init__(self, school_id, number_of_students, school_address, main_subject):
+        self.school_id = school_id
+        self.number_of_students = number_of_students
+        self.school_address = school_address
+        self.main_subject = main_subject
+
+    def print_school_address(self):
+        print(f"{self.school_id}'s school address is: {self.school_address}.")
+
+    def print_school_main_subject(self):
+        print(f"{self.school_id}'s school main subject is: {self.main_subject}.")
+
+
+school_18 = School(18, 500, "Petluru 18", "Math")
+school_18.print_school_address()
+school_18.print_school_main_subject()
+
+
+# 6*. Створіть новий клас SchoolBus, який успадкує всі методи від School і Bus і матиме власний - bus_school_color
+
