@@ -186,7 +186,7 @@ class City:
         else:
             cls.name = name
             cls.population = population
-            return cls
+            return object.__new__(cls)
 
 
 lviv = City("Lviv", 4000)
