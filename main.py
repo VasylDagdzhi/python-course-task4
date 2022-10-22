@@ -111,6 +111,33 @@ school_18 = School(18, 500, "Petluru 18", "Math")
 school_18.print_school_address()
 school_18.print_school_main_subject()
 
-
 # 6*. Створіть новий клас SchoolBus, який успадкує всі методи від School і Bus і матиме власний - bus_school_color
 
+print("\nTask 6\n")
+
+
+class SchoolBus(School, Bus):
+    school_bus_color: str
+
+    def __init__(self, speed, max_speed, mileage, seating_capacity, school_id, number_of_students, school_address,
+                 main_subject, school_bus_color):
+        self.speed = speed
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.seating_capacity = seating_capacity
+        self.school_id = school_id
+        self.number_of_students = number_of_students
+        self.school_address = school_address
+        self.main_subject = main_subject
+        self.school_bus_color = school_bus_color
+
+        super().__init__(self.speed, self.max_speed, self.mileage, self.seating_capacity)
+        super().__init__(self.school_id, self.number_of_students, self.school_address, self.main_subject)
+
+
+school_bus_18 = SchoolBus(21, 40, 22, 32, 18, 500, "Address", "Math", "Red")
+school_bus_18.increase_speed()
+school_bus_18.mileage_info()
+school_bus_18.show_seating_capacity()
+school_bus_18.print_school_address()
+school_bus_18.print_school_main_subject()
