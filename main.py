@@ -40,7 +40,7 @@ auto = Vehicle(10, 20, 2)
 auto.increase_speed()
 auto.increase_speed()
 auto.increase_speed()
-auto.break_speed()
+# auto.break_speed()
 auto.mileage_info()
 
 # 2. Створіть дочірній клас Bus, який успадкує всі змінні та методи класу Vehicle і матиме власний метод
@@ -64,11 +64,17 @@ bus = Bus(20, 60, 20, 18)
 bus.increase_speed()
 bus.increase_speed()
 bus.increase_speed()
-bus.break_speed()
+# bus.break_speed()
 bus.mileage_info()
 bus.show_seating_capacity()
 
 # 3. Визначте, від якого класу успадковується клас Bus (перевірте issubclass)
+
+print("Task 3\n")
+
+print(f"Is class 'Vehicle' inherited from class 'Bus'? \t {issubclass(Vehicle, Bus)}")
+print(f"Is class 'Bus' inherited from class 'Vehicle'? \t {issubclass(Bus, Vehicle)}")
+
 
 # 4. Створіть екземпляр Bus під назвою school_bus і визначте, чи є school_bus об'єктом класу Vehicle/Bus
 # 5. Створіть новий клас School з атрибутами екземпляра get_school_id і number_of_students та методами school_address,
