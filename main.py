@@ -45,7 +45,31 @@ auto.mileage_info()
 
 # 2. Створіть дочірній клас Bus, який успадкує всі змінні та методи класу Vehicle і матиме власний метод
 # seating_capacity
+
+print("Task 2\n")
+
+
+class Bus(Vehicle):
+    seating_capacity: int
+
+    def __init__(self, speed, max_speed, mileage, seating_capacity):
+        super().__init__(speed, max_speed, mileage)
+        self.seating_capacity = seating_capacity
+
+    def show_seating_capacity(self):
+        print(f"Seating capacity of the bus is: {self.seating_capacity}")
+
+
+bus = Bus(20, 60, 20, 18)
+bus.increase_speed()
+bus.increase_speed()
+bus.increase_speed()
+bus.break_speed()
+bus.mileage_info()
+bus.show_seating_capacity()
+
 # 3. Визначте, від якого класу успадковується клас Bus (перевірте issubclass)
+
 # 4. Створіть екземпляр Bus під назвою school_bus і визначте, чи є school_bus об'єктом класу Vehicle/Bus
 # 5. Створіть новий клас School з атрибутами екземпляра get_school_id і number_of_students та методами school_address,
 # main_subject
