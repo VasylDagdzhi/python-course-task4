@@ -40,7 +40,8 @@ auto = Vehicle(10, 20, 2)
 auto.increase_speed()
 auto.increase_speed()
 auto.increase_speed()
-# auto.break_speed()
+# Method break_speed() call may be commented during later tasks since its time-consuming execution
+auto.break_speed()
 auto.mileage_info()
 
 # 2. Створіть дочірній клас Bus, який успадкує всі змінні та методи класу Vehicle і матиме власний метод
@@ -64,7 +65,8 @@ bus = Bus(20, 60, 20, 18)
 bus.increase_speed()
 bus.increase_speed()
 bus.increase_speed()
-# bus.break_speed()
+# Method break_speed() call may be commented during later tasks since its time-consuming execution
+bus.break_speed()
 bus.mileage_info()
 bus.show_seating_capacity()
 
@@ -179,7 +181,7 @@ class City:
 
     def __new__(cls, name, population):
         if population < 1500:
-            print("Your population is too small!")
+            print(f"{name} population is too small!")
             return None
         else:
             cls.name = name
@@ -195,4 +197,4 @@ for i in city_cortege:
     if i is not None:
         print(f"{i.name} population is {i.population}.")
     else:
-        print(f"{i.name} is not a city.")
+        print(f"Object is not a city.")
